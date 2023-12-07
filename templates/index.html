@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Control</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px 10px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .button-container button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+        @media only screen and (min-width: 768px) {
+            .button-container {
+                flex-direction: row;
+                justify-content: center;
+            }
+            .button-container button {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Mute Control</h1>
+    <div class="button-container">
+        <form action="/mute" method="post">
+            <button type="submit" name="mute_button">Mute</button>
+        </form>
+    </div>
+</body>
+</html>
